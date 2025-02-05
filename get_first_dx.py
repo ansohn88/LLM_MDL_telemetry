@@ -14,7 +14,7 @@ Column/keys of the provided EPIC views:
 """
 
 
-PATH_REPORTS_FILEPATH = "/Users/amsohn/Programming/mdl_telemetry/leukemia.json"
+PATH_REPORTS_FILEPATH = ""
 
 
 def convert_to_datetime(date_string):
@@ -45,7 +45,7 @@ def deduplicate_by_mrn(all_reports):
     return by_mrn
 
 
-def sort_by_collection_dates(reports_by_mrn):
+def sort_by_collection_dates(reports_by_mrn, save_as_json):
     sorted_list = sorted(
         reports_by_mrn, key = lambda x: convert_to_datetime(x["SpecimenCollectionDate"])
     )
@@ -60,6 +60,11 @@ def filter_by_first_dx(reports_by_mrn):
         else:
             sorted_reports = sort_by_collection_dates(v)
             original_dx.append(sorted_reports[0])
+
+    if save_as_json:
+        with open(FINAL_REPORTS_FILEPATH, 'w') as json_file:
+            json_file.write(json.dumps(original_dx))
+
     return original_dx
 
 
@@ -70,8 +75,6 @@ def main():
     by_mrn = deduplicate_by_mrn(leukemia)
     first_dxs = filter_by_first_dx(by_mrn)
     assert len(by_mrn) == len(first_dxs)
-    
-    print(first_dxs[0]["FlowComponent"])
 
 
 if __name__=='__main__':
