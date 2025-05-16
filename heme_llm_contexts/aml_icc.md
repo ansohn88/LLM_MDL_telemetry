@@ -1,4 +1,4 @@
-# Diagnostic Criteria for Each Subtype of Acute Myeloid Leukemia (AML)
+# ICC Diagnostic Criteria for Each Subtype of Acute Myeloid Leukemia (AML)
 
 ## Summary Table
 
