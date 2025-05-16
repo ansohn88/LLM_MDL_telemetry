@@ -1,4 +1,4 @@
-# Diagnostic Criteria for Each Subtype of Myelodysplastic Syndrome (MDS)
+# ICC Diagnostic Criteria for Each Subtype of Myelodysplastic Syndrome (MDS)
 
 ## Summary Table
 
