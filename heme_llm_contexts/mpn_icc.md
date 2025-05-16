@@ -1,4 +1,4 @@
-# Diagnostic Criteria for Myeloproliferative Neoplasms (MPN)
+# ICC Diagnostic Criteria for Myeloproliferative Neoplasms (MPN)
 
 ## Summary Table
 
